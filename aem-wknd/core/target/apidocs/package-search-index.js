@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.adobe.aem.guides.wknd.core.models"},{"l":"com.adobe.aem.guides.wknd.core.models.impl"}]

@@ -1,0 +1,39 @@
+{
+  "id":"com.adobe.aem.guides:aem-guides-wknd.all:slingosgifeature:3.2.1-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.adobe.aem.guides:aem-guides-wknd.core:3.2.1-SNAPSHOT",
+      "Bundle-SymbolicName":"aem-guides-wknd.core",
+      "Bundle-Version":"3.2.1.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:3.2.1-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "org.apache.sling.commons.log.LogManager.factory.config~wknd":    {
+      "org.apache.sling.commons.log.names":[
+        "com.adobe.aem.guides.wknd"
+      ],
+      "org.apache.sling.commons.log.level":"info",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"true",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:3.2.1-SNAPSHOT|com.adobe.aem.guides:aem-guides-wknd.ui.config:3.2.1-SNAPSHOT"
+    }
+  },
+  "content-packages:ARTIFACTS|true":[
+    "com.adobe.aem.guides:aem-guides-wknd.ui.apps:zip:cp2fm-converted:3.2.1-SNAPSHOT",
+    "com.adobe.aem.guides:aem-guides-wknd.ui.config:zip:cp2fm-converted:3.2.1-SNAPSHOT",
+    "com.adobe.aem.guides:aem-guides-wknd.all:zip:cp2fm-converted:3.2.1-SNAPSHOT"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.adobe.aem.guides.wknd.core.models"
+      ]
+    },
+    {
+      "name":"com.adobe.aem.deprecated"
+    }
+  ]
+}
